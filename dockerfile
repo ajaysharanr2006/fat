@@ -1,3 +1,4 @@
-FROM openjdk:11-jre-slim
-COPY target/simple-app-java-1.0-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+FROM nginx:alpine
+RUN sed -i 's/listen\(.*\)80;/listen 9000;/' /etc/nginx/conf.d/default.conf
+COPY . /usr/share/nginx/html
+EXPOSE 9000
