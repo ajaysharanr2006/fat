@@ -6,7 +6,6 @@
     <artifactId>simple-app-java</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>simple-app-java</name>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
