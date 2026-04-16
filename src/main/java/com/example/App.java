@@ -1,6 +1,31 @@
 package main.java.com.example;
 public class App {
-    
+    public static int[][] multiply(int[][] A, int[][] B) {
+        int rowsA = A.length;
+        int colsA = A[0].length;
+        int colsB = B[0].length;
+        int[][] result = new int[rowsA][colsB];
 
-    
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                for (int k = 0; k < colsA; k++) {
+                    result[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] A = {{1, 2}, {3, 4}};
+        int[][] B = {{2, 0}, {1, 2}};
+        int[][] res = multiply(A, B);
+        
+        System.out.println("Matrix Multiplication Result:");
+        for (int[] row : res) {
+            for (int val : row) System.out.print(val + " ");
+            System.out.println();
+        }
+    }
 }
+
