@@ -1,4 +1,4 @@
-package main.java.com.example;
+package com.example;
 public class App {
     public static int[][] multiply(int[][] A, int[][] B) {
         int rowsA = A.length;
