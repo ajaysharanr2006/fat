@@ -1,4 +1,4 @@
-package main.java.com.example;
+package com.example;
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
